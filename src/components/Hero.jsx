@@ -1,0 +1,56 @@
+import myimg from "../assets/image/pt.jpg";
+
+function Hero() {
+  return (
+    <section id="home" className="hero-section">
+      <div className="container">
+        <div className="row align-items-center hero-row">
+
+          {/* Left Side */}
+          <div className="col-lg-6 hero-content">
+
+            <h6 className="hero-subtitle">
+              HELLO, I'M
+            </h6>
+
+            <h1 className="hero-title">
+              Sakshi Chaurasia
+            </h1>
+
+            <h3 className="hero-role">
+              Full Stack Web Developer
+            </h3>
+
+            <p className="hero-description">
+              I design and develop modern, responsive and user-friendly web
+              applications using the latest web technologies.
+            </p>
+
+            <div className="hero-buttons">
+              <button className="btn btn-primary hire-btn">
+                Hire Me
+              </button>
+
+              <button className="btn btn-outline-dark cv-btn">
+                Download CV
+              </button>
+            </div>
+
+          </div>
+
+          {/* Right Side */}
+          <div className="col-lg-6 text-center">
+
+            <div className="hero-image">
+              <img src={myimg} alt="Profile" />
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Hero;
