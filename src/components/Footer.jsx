@@ -8,8 +8,8 @@ function Footer() {
 
           {/* Left */}
           <div className="col-lg-4 mb-4">
-            <h3 className="fw-bold">Sakshi Chaurasia</h3>
-            <p className="text-light">
+            <h3 className="fw-bold">Sakshi Portfolio</h3>
+            <p className="footer-link">
               Passionate Full Stack Web Developer dedicated to building modern,
               responsive, and user-friendly web applications.
             </p>

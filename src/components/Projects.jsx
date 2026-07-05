@@ -6,34 +6,36 @@ function Projects() {
   const projects = [
     {
       image: project1,
-      title: "Portfolio Website",
+      title: "Brainsync-AI",
       description:
-        "Responsive portfolio website built using React and Bootstrap.",
+        "Smart AI assistant for generating ideas, answering questions, and boosting productivity.",
       tech: [
         { name: "React", color: "primary" },
-        { name: "Bootstrap", color: "dark" },
+        { name: "Node.js", color: "dark" },
+        { name: "ChromaDB", color: "success"},
       ],
       btn: "primary",
     },
     {
       image: project2,
-      title: "Todo App",
+      title: "Portfolio Website",
       description:
-        "Task management application with CRUD features.",
+        "Responsive portfolio website built using React and Bootstrap.",
       tech: [
         { name: "React", color: "success" },
-        { name: "JavaScript", color: "warning text-dark" },
+        { name: "Bootstrap", color: "warning text-dark" },
       ],
       btn: "success",
     },
     {
       image: project3,
-      title: "E-Commerce UI",
+      title: "Bank Managemnt System",
       description:
-        "Modern shopping website interface using Bootstrap.",
+        "Banking application for managing customer accounts, transactions, deposits, and withdrawals.",
       tech: [
-        { name: "HTML", color: "danger" },
-        { name: "CSS", color: "info" },
+        { name: "Java", color: "danger" },
+        { name: "MySQL", color: "info" },
+        { name: "Flask", color: "bg-primary" },
       ],
       btn: "danger",
     },

@@ -29,7 +29,7 @@ function Contact() {
               <i className="bi bi-envelope-fill fs-3 text-primary me-3"></i>
               <div>
                 <h6 className="mb-1">Email</h6>
-                <p className="text-muted mb-0">youremail@example.com</p>
+                <p className="text-muted mb-0">sakshichaurasia59@example.com</p>
               </div>
             </div>
 
@@ -37,7 +37,7 @@ function Contact() {
               <i className="bi bi-telephone-fill fs-3 text-primary me-3"></i>
               <div>
                 <h6 className="mb-1">Phone</h6>
-                <p className="text-muted mb-0">+91 XXXXXXXXXX</p>
+                <p className="text-muted mb-0">+91 7084241930</p>
               </div>
             </div>
 

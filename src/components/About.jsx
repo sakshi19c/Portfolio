@@ -35,21 +35,21 @@ function About() {
           <div className="row mt-4">
 
             <div className="col-md-6">
-              <p><strong>Name:</strong> John Doe</p>
-              <p><strong>Email:</strong> john@example.com</p>
-              <p><strong>Phone:</strong> +1 234 567 890</p>
+              <p><strong>Name:</strong> Sakshi Chaurasia</p>
+              <p><strong>Email:</strong> sakshichaurasia59@gmail.com</p>
+              <p><strong>Phone:</strong> 7084241930 </p>
             </div>
 
             <div className="col-md-6">
-              <p><strong>Experience:</strong> 3+ Years</p>
-              <p><strong>Location:</strong> New York</p>
+              <p><strong>Experience:</strong> Student</p>
+              <p><strong>Location:</strong> India </p>
               <p><strong>Freelance:</strong> Available</p>
             </div>
 
           </div>
 
           <button className="btn btn-primary mt-4">
-            Read More
+            Download Resume
           </button>
         </div>
 

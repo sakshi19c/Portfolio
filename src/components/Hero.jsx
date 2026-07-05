@@ -22,8 +22,8 @@ function Hero() {
             </h3>
 
             <p className="hero-description">
-              I design and develop modern, responsive and user-friendly web
-              applications using the latest web technologies.
+              I design and develop modern, responsive, and user-friendly web applications using React, JavaScript, HTML, CSS, Bootstrap, Node.js, Express.js, Flask, MongoDB, and AI technologies, with a focus on clean design, high performance, and seamless user experiences.
+
             </p>
 
             <div className="hero-buttons">
