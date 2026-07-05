@@ -1,78 +1,83 @@
-
 function Experience() {
-  const experiences = [
+  const experience = [
     {
-      role: "MERN Stack Developer",
-      company: "Self Learning",
-      duration: "2025 - Present",
+      year: "2024 - Present",
+      badge: "primary",
+      title: "Senior Full Stack Developer",
+      company: "ABC Technologies",
+      companyColor: "primary",
       description:
-        "Learning full-stack web development by building real-world applications using MongoDB, Express.js, React, and Node.js while continuously improving problem-solving and development skills.",
+        "Developed responsive web applications using React, Node.js and MySQL. Worked on REST APIs and dashboard development.",
     },
-
     {
-      role: "Frontend Developer",
-      company: "Personal Projects",
-      duration: "2025 - Present",
+      year: "2022 - 2024",
+      badge: "success",
+      title: "Frontend Developer",
+      company: "XYZ Solutions",
+      companyColor: "success",
       description:
-        "Developing responsive and interactive user interfaces using HTML, CSS, Bootstrap, JavaScript, and React with a focus on clean design and excellent user experience.",
+        "Designed modern user interfaces using HTML, CSS, Bootstrap and React.",
     },
-
     {
-      role: "Backend Developer",
-      company: "Project Based Learning",
-      duration: "2025 - Present",
+      year: "2021 - 2022",
+      badge: "warning",
+      title: "Web Designer",
+      company: "Web Studio",
+      companyColor: "warning",
       description:
-        "Creating REST APIs, integrating MongoDB databases, implementing authentication, and building scalable backend applications using Node.js and Express.js.",
+        "Created responsive websites and landing pages using Bootstrap and JavaScript.",
     },
-
     {
-      role: "AI Application Developer",
-      company: "Brain Sync AI",
-      duration: "2026 - Present",
+      year: "2020 - 2021",
+      badge: "danger",
+      title: "Intern Web Developer",
+      company: "Tech Startup",
+      companyColor: "danger",
       description:
-        "Developing an AI-powered productivity platform featuring intelligent content generation, task management, workflow automation, and modern full-stack architecture.",
+        "Learned frontend development, debugging and website maintenance while working on live projects.",
     },
   ];
 
   return (
-    <section id="experience" className="container py-5">
-      <div className="text-center mb-5">
-        <h1 className="fw-bold">Experience</h1>
-        <p className="text-muted">
-          My journey of learning, building projects, and growing as a developer.
-        </p>
-      </div>
+    <section id="experience" className="py-5 bg-light">
+      <div className="container">
 
-      <div className="row g-4">
-        {experiences.map((exp, index) => (
-          <div className="col-lg-6" key={index}>
-            <div className="card h-100 shadow border-0 rounded-4">
-              <div className="card-body">
+        <div className="text-center mb-5">
+          <h2 className="fw-bold display-6">Work Experience</h2>
+          <p className="text-muted">
+            My professional journey and experience.
+          </p>
+        </div>
 
-                <span className="badge bg-primary mb-3">
-                  {exp.duration}
+        <div className="row g-4">
+
+          {experience.map((item, index) => (
+            <div className="col-lg-6" key={index}>
+
+              <div className="experience-card">
+
+                <span className={`badge bg-${item.badge} px-3 py-2 mb-4`}>
+                  {item.year}
                 </span>
 
-                <h4 className="fw-bold">
-                  {exp.role}
-                </h4>
+                <h2>{item.title}</h2>
 
-                <h6 className="text-primary mb-3">
-                  {exp.company}
-                </h6>
+                <h5 className={`text-${item.companyColor}`}>
+                  {item.company}
+                </h5>
 
-                <p className="text-muted">
-                  {exp.description}
-                </p>
+                <p>{item.description}</p>
 
               </div>
+
             </div>
-          </div>
-        ))}
+          ))}
+
+        </div>
+
       </div>
     </section>
   );
 }
 
 export default Experience;
-

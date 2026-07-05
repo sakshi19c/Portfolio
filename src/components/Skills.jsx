@@ -1,82 +1,83 @@
 function Skills() {
-  const frontendSkills = [
-    { name: "HTML5", level: 95 },
-    { name: "CSS3", level: 90 },
-    { name: "JavaScript", level: 85 },
-    { name: "React.js", level: 80 },
+  const frontend = [
+    { name: "HTML", value: 95, color: "primary" },
+    { name: "CSS", value: 90, color: "success" },
+    { name: "JavaScript", value: 85, color: "warning" },
+    { name: "React", value: 80, color: "info" },
   ];
 
-  const backendSkills = [
-    { name: "Node.js", level: 70 },
-    { name: "Express.js", level: 70 },
-    { name: "MongoDB", level: 65 },
-    { name: "REST API", level: 70 },
+  const backend = [
+    { name: "Node.js", value: 80, color: "dark" },
+    { name: "Express.js", value: 78, color: "danger" },
+    { name: "MySQL", value: 82, color: "secondary" },
+    { name: "Git & GitHub", value: 88, color: "primary" },
   ];
 
   return (
-    <section id="skills" className="container py-5">
-      <div className="text-center mb-5">
-        <h1 className="fw-bold">My Skills</h1>
-        <p className="text-muted">
-          Technologies I use to build responsive and full-stack web
-          applications.
-        </p>
-      </div>
+    <section id="skills" className="py-5 bg-white">
+      <div className="container">
 
-      <div className="row">
-
-        {/* Frontend Skills */}
-        <div className="col-lg-6 mb-5">
-          <h3 className="fw-bold text-primary mb-4">
-            Frontend Development
-          </h3>
-
-          {frontendSkills.map((skill, index) => (
-            <div className="mb-4" key={index}>
-              <div className="d-flex justify-content-between mb-2">
-                <span className="fw-semibold">{skill.name}</span>
-                <span>{skill.level}%</span>
-              </div>
-
-              <div
-                className="progress"
-                style={{ height: "10px", borderRadius: "10px" }}
-              >
-                <div
-                  className="progress-bar bg-primary"
-                  role="progressbar"
-                  style={{ width: `${skill.level}%` }}
-                ></div>
-              </div>
-            </div>
-          ))}
+        <div className="text-center mb-5">
+          <h2 className="fw-bold display-6">My Skills</h2>
+          <p className="text-muted">
+            Technologies and tools I work with.
+          </p>
         </div>
 
-        {/* Backend Skills */}
-        <div className="col-lg-6">
-          <h3 className="fw-bold text-success mb-4">
-            Backend Development
-          </h3>
+        <div className="row g-4">
 
-          {backendSkills.map((skill, index) => (
-            <div className="mb-4" key={index}>
-              <div className="d-flex justify-content-between mb-2">
-                <span className="fw-semibold">{skill.name}</span>
-                <span>{skill.level}%</span>
-              </div>
+          {/* Frontend */}
+          <div className="col-lg-6">
+            <div className="skill-card">
 
-              <div
-                className="progress"
-                style={{ height: "10px", borderRadius: "10px" }}
-              >
-                <div
-                  className="progress-bar bg-success"
-                  role="progressbar"
-                  style={{ width: `${skill.level}%` }}
-                ></div>
-              </div>
+              <h2 className="mb-4">Frontend Skills</h2>
+
+              {frontend.map((skill, index) => (
+                <div key={index} className="mb-4">
+
+                  <h5>{skill.name}</h5>
+
+                  <div className="progress">
+                    <div
+                      className={`progress-bar bg-${skill.color}`}
+                      style={{ width: `${skill.value}%` }}
+                    >
+                      {skill.value}%
+                    </div>
+                  </div>
+
+                </div>
+              ))}
+
             </div>
-          ))}
+          </div>
+
+          {/* Backend */}
+          <div className="col-lg-6">
+            <div className="skill-card">
+
+              <h2 className="mb-4">Backend Skills</h2>
+
+              {backend.map((skill, index) => (
+                <div key={index} className="mb-4">
+
+                  <h5>{skill.name}</h5>
+
+                  <div className="progress">
+                    <div
+                      className={`progress-bar bg-${skill.color}`}
+                      style={{ width: `${skill.value}%` }}
+                    >
+                      {skill.value}%
+                    </div>
+                  </div>
+
+                </div>
+              ))}
+
+            </div>
+          </div>
+
         </div>
 
       </div>

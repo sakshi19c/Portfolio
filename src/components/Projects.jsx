@@ -1,104 +1,104 @@
-import projectImg from "../assets/image/s.jpg";
-import projectImg1 from "../assets/image/p.jpg";
-import projectImg2 from "../assets/image/b.jpg";
+import project1 from "../assets/image/s.jpg";
+import project2 from "../assets/image/p.jpg";
+import project3 from "../assets/image/b.jpg";
 
 function Projects() {
   const projects = [
     {
+      image: project1,
       title: "Portfolio Website",
       description:
         "Responsive portfolio website built using React and Bootstrap.",
-      tech: "React • Bootstrap • CSS",
-      image: projectImg1,
-      github: "#",
-      live: "#",
+      tech: [
+        { name: "React", color: "primary" },
+        { name: "Bootstrap", color: "dark" },
+      ],
+      btn: "primary",
     },
-
     {
-      title: "Bank Management System",
+      image: project2,
+      title: "Todo App",
       description:
-        "A full-stack banking application that enables users to create accounts, manage customer details, perform deposits, withdrawals, fund transfers, and securely maintain banking records through an intuitive dashboard.",
-      tech: "React • Node.js • Express • MongoDB",
-      image: projectImg2,
-      github: "#",
-      live: "#",
+        "Task management application with CRUD features.",
+      tech: [
+        { name: "React", color: "success" },
+        { name: "JavaScript", color: "warning text-dark" },
+      ],
+      btn: "success",
     },
-
     {
-      title: "Brain Sync AI",
+      image: project3,
+      title: "E-Commerce UI",
       description:
-        "An AI-powered productivity platform designed to help users organize ideas, generate content, manage tasks, and boost productivity through intelligent automation and a modern user interface.",
-      tech: "React • AI • Node.js • Express • MongoDB",
-      image: projectImg,
-      github: "#",
-      live: "#",
+        "Modern shopping website interface using Bootstrap.",
+      tech: [
+        { name: "HTML", color: "danger" },
+        { name: "CSS", color: "info" },
+      ],
+      btn: "danger",
     },
   ];
 
   return (
-    <section id="projects" className="container py-5">
-      <div className="text-center mb-5">
-        <h1 className="fw-bold">My Projects</h1>
-        <p className="text-muted">
-          Here are some of the projects I have built while learning and
-          exploring modern web development technologies.
-        </p>
-      </div>
+    <section id="projects" className="py-5 bg-light">
+      <div className="container">
+        <div className="text-center mb-5">
+          <h2 className="fw-bold display-6">My Projects</h2>
+          <p className="text-muted">
+            Here are some of my recent projects.
+          </p>
+        </div>
 
-      <div className="row g-4">
-        {projects.map((project, index) => (
-          <div className="col-lg-4 col-md-6" key={index}>
-            <div className="card h-100 border-0 rounded-4">
+        <div className="row g-4">
+          {projects.map((project, index) => (
+            <div className="col-lg-4 col-md-6" key={index}>
+              <div className="project-card h-100">
 
-              <img
-                src={project.image}
-                alt={project.title}
-                className="card-img-top"
-                style={{
-                  height: "230px",
-                  objectFit: "cover",
-                }}
-              />
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-img"
+                />
 
-              <div className="card-body d-flex flex-column">
+                <div className="p-4">
 
-                <h4 className="fw-bold mb-3">
-                  {project.title}
-                </h4>
+                  <h3 className="fw-bold mb-3">{project.title}</h3>
 
-                <p className="text-muted">
-                  {project.description}
-                </p>
+                  <p className="text-muted">
+                    {project.description}
+                  </p>
 
-                <p className="fw-semibold text-primary">
-                  {project.tech}
-                </p>
+                  <div className="mb-4">
+                    {project.tech.map((item, i) => (
+                      <span
+                        key={i}
+                        className={`badge bg-${item.color} me-2`}
+                      >
+                        {item.name}
+                      </span>
+                    ))}
+                  </div>
 
-                <div className="mt-auto">
                   <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-dark me-2"
+                    href="#"
+                    className={`btn btn-${project.btn} me-2`}
+                  >
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="#"
+                    className="btn btn-outline-dark"
                   >
                     GitHub
                   </a>
 
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-primary"
-                  >
-                    Live Demo
-                  </a>
                 </div>
 
               </div>
-
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

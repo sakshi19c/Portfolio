@@ -1,78 +1,74 @@
-
-import certificateImg from "../assets/image/pt.jpg";
+import certificate1 from "../assets/image/certificate1.jpeg";
+import certificate2 from "../assets/image/certificate2.jpeg";
+import certificate3 from "../assets/image/certificate3.jpeg";
 
 function Certificates() {
   const certificates = [
     {
-      title: "Full Stack Web Development",
-      issuer: "Professional Certification",
-      year: "2025",
-      image: certificateImg,
+      image: certificate1,
+      title: "Genrative AI",
+      issuer: "Issued by TCS",
+      color: "primary",
     },
     {
-      title: "React.js Development",
-      issuer: "Professional Certification",
-      year: "2025",
-      image: certificateImg,
+      image: certificate2,
+      title: "Cybersecurity fundamentals",
+      issuer: "Issued by IBM",
+      color: "success",
     },
     {
-      title: "JavaScript Programming",
-      issuer: "Professional Certification",
-      year: "2025",
-      image: certificateImg,
+      image: certificate3,
+      title: "Google Cloud Generative AI",
+      issuer: "Issued by Issued by Google Cloud",
+      color: "warning",
     },
   ];
 
   return (
-    <section id="certificates" className="container py-5">
-      <div className="text-center mb-5">
-        <h1 className="fw-bold">Certificates</h1>
-        <p className="text-muted">
-          A few certifications that showcase my learning journey and technical
-          skills.
-        </p>
-      </div>
+    <section id="certificates" className="py-5 bg-light">
+      <div className="container">
 
-      <div className="row g-4">
-        {certificates.map((certificate, index) => (
-          <div className="col-lg-4 col-md-6" key={index}>
-            <div className="card h-100 border-0 shadow rounded-4 certificate-card">
+        <div className="text-center mb-5">
+          <h2 className="fw-bold">My Certificates</h2>
+          <p className="text-muted">
+            Professional certifications and achievements.
+          </p>
+        </div>
 
-              <img
-                src={certificate.image}
-                alt={certificate.title}
-                className="card-img-top"
-                style={{
-                  height: "220px",
-                  objectFit: "cover",
-                }}
-              />
+        <div className="row g-4">
 
-              <div className="card-body text-center">
+          {certificates.map((item, index) => (
+            <div className="col-lg-4 col-md-6" key={index}>
 
-                <h5 className="fw-bold">
-                  {certificate.title}
-                </h5>
+              <div className="card certificate-card shadow border-0 h-100">
 
-                <p className="text-primary mb-1">
-                  {certificate.issuer}
-                </p>
+                <img
+                  src={item.image}
+                  className="card-img-top"
+                  alt={item.title}
+                />
 
-                <small className="text-muted">
-                  Issued: {certificate.year}
-                </small>
+                <div className="card-body">
 
-              </div>
+                  <h4 className="fw-bold">{item.title}</h4>
 
-              <div className="card-footer bg-white border-0 text-center pb-4">
-                <button className="btn btn-primary px-4">
-                  View Certificate
-                </button>
+                  <p className="text-muted">
+                    {item.issuer}
+                  </p>
+
+                  <button className={`btn btn-${item.color} w-100`}>
+                    View Certificate
+                  </button>
+
+                </div>
+
               </div>
 
             </div>
-          </div>
-        ))}
+          ))}
+
+        </div>
+
       </div>
     </section>
   );
