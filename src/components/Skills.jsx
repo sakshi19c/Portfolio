@@ -1,85 +1,131 @@
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+} from "react-icons/fa";
+
+import {
+  SiJavascript,
+  SiExpress,
+  SiMysql,
+} from "react-icons/si";
+
 function Skills() {
   const frontend = [
-    { name: "HTML", value: 95, color: "primary" },
-    { name: "CSS", value: 90, color: "success" },
-    { name: "JavaScript", value: 85, color: "warning" },
-    { name: "React", value: 80, color: "info" },
+    { name: "HTML", icon: <FaHtml5 />, color: "#E34F26", percentage: 90 },
+    { name: "CSS", icon: <FaCss3Alt />, color: "#1572B6", percentage: 85 },
+    { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E", percentage: 80 },
+    { name: "React", icon: <FaReact />, color: "#61DAFB", percentage: 75 },
   ];
 
   const backend = [
-    { name: "Node.js", value: 80, color: "dark" },
-    { name: "Express.js", value: 78, color: "danger" },
-    { name: "MySQL", value: 82, color: "secondary" },
-    { name: "Git & GitHub", value: 88, color: "primary" },
+    { name: "Node.js", icon: <FaNodeJs />, color: "#339933", percentage: 70 },
+    { name: "Express.js", icon: <SiExpress />, color: "#000000", percentage: 65 },
+    { name: "MySQL", icon: <SiMysql />, color: "#00758F", percentage: 60 },
+    { name: "Git", icon: <FaGitAlt />, color: "#F05032", percentage: 80 },
   ];
 
   return (
-    <section id="skills" className="py-5 bg-white">
+    <section id="skills" className="py-5">
       <div className="container">
 
-        <div className="text-center mb-5">
-          <h2 className="fw-bold display-6">My Skills</h2>
-          <p className="text-muted">
+        {/* Heading */}
+        <div className="text-center mb-4">
+          <h2 className="section-title">My Skills</h2>
+          <p className="section-subtitle">
             Technologies and tools I work with.
           </p>
         </div>
 
         <div className="row g-4">
 
-          {/* Frontend */}
+          {/* FRONTEND */}
           <div className="col-lg-6">
-            <div className="skill-card">
+            <div className="skill-category">
+              <h3 className="text-primary mb-4">💻 Frontend Development</h3>
 
-              <h2 className="mb-4">Frontend Skills</h2>
+              <div className="row g-3">
+                {frontend.map((skill, index) => (
+                  <div className="col-6" key={index}>
+                    <div className="skill-box">
 
-              {frontend.map((skill, index) => (
-                <div key={index} className="mb-4">
+                      <div
+                        className="skill-icon"
+                        style={{ color: skill.color }}
+                      >
+                        {skill.icon}
+                      </div>
 
-                  <h5>{skill.name}</h5>
+                      <h6>{skill.name}</h6>
 
-                  <div className="progress">
-                    <div
-                      className={`progress-bar bg-${skill.color}`}
-                      style={{ width: `${skill.value}%` }}
-                    >
-                      {skill.value}%
+                      {/* Percentage */}
+                      <span className="skill-percent">
+                        {skill.percentage}%
+                      </span>
+
+                      {/* Progress Bar */}
+                      <div className="progress-bar">
+                        <div
+                          className="progress-fill"
+                          style={{
+                            width: `${skill.percentage}%`,
+                            background: skill.color,
+                          }}
+                        />
+                      </div>
+
                     </div>
                   </div>
-
-                </div>
-              ))}
-
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Backend */}
+          {/* BACKEND */}
           <div className="col-lg-6">
-            <div className="skill-card">
+            <div className="skill-category">
+              <h3 className="text-success mb-4">⚙ Backend Development</h3>
 
-              <h2 className="mb-4">Backend Skills</h2>
+              <div className="row g-3">
+                {backend.map((skill, index) => (
+                  <div className="col-6" key={index}>
+                    <div className="skill-box">
 
-              {backend.map((skill, index) => (
-                <div key={index} className="mb-4">
+                      <div
+                        className="skill-icon"
+                        style={{ color: skill.color }}
+                      >
+                        {skill.icon}
+                      </div>
 
-                  <h5>{skill.name}</h5>
+                      <h6>{skill.name}</h6>
 
-                  <div className="progress">
-                    <div
-                      className={`progress-bar bg-${skill.color}`}
-                      style={{ width: `${skill.value}%` }}
-                    >
-                      {skill.value}%
+                      {/* Percentage */}
+                      <span className="skill-percent">
+                        {skill.percentage}%
+                      </span>
+
+                      {/* Progress Bar */}
+                      <div className="progress-bar">
+                        <div
+                          className="progress-fill"
+                          style={{
+                            width: `${skill.percentage}%`,
+                            background: skill.color,
+                          }}
+                        />
+                      </div>
+
                     </div>
                   </div>
-
-                </div>
-              ))}
-
+                ))}
+              </div>
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
   );

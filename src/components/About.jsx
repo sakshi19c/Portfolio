@@ -4,7 +4,7 @@ function About() {
   return (
     <section className="container py-5" id="about">
       <div className="text-center mb-5">
-        <h1 className="fw-bold">About Me</h1>
+        <h1 className="fw-bold fs-1">About Me</h1>
         <p className="text-muted">
           Learn more about my background and experience.
         </p>
@@ -26,10 +26,11 @@ function About() {
           <h2 className="fw-bold mb-3">Full Stack Web Developer</h2>
 
           <p className="text-muted">
-            I am a passionate Full Stack Web Developer who enjoys creating
-            responsive and user-friendly web applications. I love learning
-            new technologies and building modern websites using the MERN
-            stack.
+            I'm a B.Tech Information Technology student passionate about building modern 
+            web applications using the MERN stack. I enjoy creating clean user interfaces,
+             solving real-world problems, and continuously learning new technologies. 
+             My goal is to become a skilled Full Stack Developer while expanding into 
+             AI-powered applications and cybersecurity
           </p>
 
           <div className="row mt-4">

@@ -1,51 +1,33 @@
 function Experience() {
   const experience = [
     {
-      year: "2024 - Present",
+      year: "2025 - Present",
       badge: "primary",
-      title: "Senior Full Stack Developer",
-      company: "ABC Technologies",
+      title: "Frontend Developer",
+      company: "Personal Projects",
       companyColor: "primary",
       description:
-        "Developed responsive web applications using React, Node.js and MySQL. Worked on REST APIs and dashboard development.",
+        "Building modern and responsive web applications using React, JavaScript, Bootstrap, CSS, and REST APIs. Developed projects including BrainSync AI, Bank Management System, and a personal portfolio.",
     },
     {
-      year: "2022 - 2024",
+      year: "2024 - Present",
       badge: "success",
-      title: "Frontend Developer",
-      company: "XYZ Solutions",
+      title: "B.Tech Information Technology",
+      company: "AKTU University",
       companyColor: "success",
       description:
-        "Designed modern user interfaces using HTML, CSS, Bootstrap and React.",
-    },
-    {
-      year: "2021 - 2022",
-      badge: "warning",
-      title: "Web Designer",
-      company: "Web Studio",
-      companyColor: "warning",
-      description:
-        "Created responsive websites and landing pages using Bootstrap and JavaScript.",
-    },
-    {
-      year: "2020 - 2021",
-      badge: "danger",
-      title: "Intern Web Developer",
-      company: "Tech Startup",
-      companyColor: "danger",
-      description:
-        "Learned frontend development, debugging and website maintenance while working on live projects.",
+        "Pursuing a Bachelor's degree in Information Technology while enhancing skills in Full Stack Development, Data Structures, DBMS, Cybersecurity, and problem solving through academic and personal projects.",
     },
   ];
 
   return (
-    <section id="experience" className="py-5 bg-light">
+    <section id="experience">
       <div className="container">
 
         <div className="text-center mb-5">
-          <h2 className="fw-bold display-6">Work Experience</h2>
-          <p className="text-muted">
-            My professional journey and experience.
+          <h2 className="experience-title">Work Experience</h2>
+          <p className="experience-subtitle">
+            My journey in technology and software development.
           </p>
         </div>
 
@@ -56,11 +38,11 @@ function Experience() {
 
               <div className="experience-card">
 
-                <span className={`badge bg-${item.badge} px-3 py-2 mb-4`}>
+                <span className={`badge bg-${item.badge}`}>
                   {item.year}
                 </span>
 
-                <h2>{item.title}</h2>
+                <h3>{item.title}</h3>
 
                 <h5 className={`text-${item.companyColor}`}>
                   {item.company}

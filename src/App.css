@@ -57,7 +57,7 @@ p{
 =========================== */
 
 .custom-navbar{
-    height:72px;
+    height:70px;
     background:#212529;
     display:flex;
     align-items:center;
@@ -194,8 +194,8 @@ p{
 =========================== */
 
 .section-title{
-    font-size:42px;
-    font-weight:700;
+    font-size:40px;
+    font-weight:100;
     margin-bottom:12px;
 }
 
@@ -320,112 +320,106 @@ p{
 }
 
 /* ===========================
-   Experience Section
+   Experience
 =========================== */
 
 #experience{
     background:#f8fbff;
-    padding:70px 0;
+    padding:60px 0;
+}
+
+.experience-title{
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.experience-subtitle{
+    font-size:16px;
+    color:#6c757d;
 }
 
 .experience-card{
     background:#fff;
     border-radius:18px;
-    padding:28px;
+    padding:25px;
     height:100%;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.35s;
+    transition:.3s;
 }
 
 .experience-card:hover{
     transform:translateY(-8px);
-    box-shadow:0 18px 45px rgba(0,0,0,.12);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
 }
 
 .experience-card .badge{
-    padding:8px 14px;
+    padding:8px 16px;
+    border-radius:30px;
     font-size:13px;
-    border-radius:20px;
+    margin-bottom:18px;
 }
 
-.experience-card h2{
-    font-size:28px;
-    margin:18px 0 10px;
+.experience-card h3{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:8px;
 }
 
 .experience-card h5{
-    font-size:20px;
-    color:#0d6efd;
-    margin-bottom:15px;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:12px;
 }
 
 .experience-card p{
     font-size:15px;
-    line-height:1.8;
     color:#666;
+    line-height:1.7;
+    margin-bottom:0;
 }
 
-/* ===========================
-   Skills
-=========================== */
-
-#skills{
-    background:#fff;
-    padding:70px 0;
+@media(max-width:992px){
+    .experience-card{
+        margin-bottom:20px;
+    }
 }
 
-.skill-card{
+.skill-category{
     background:#fff;
-    border-radius:18px;
     padding:28px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.35s;
-    height:100%;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
-.skill-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 18px 45px rgba(0,0,0,.12);
-}
-
-.skill-card h2{
-    font-size:28px;
+.skill-category h3{
+    font-size:24px;
+    font-weight:700;
     margin-bottom:25px;
 }
 
-.skill-card h5{
-    font-size:16px;
-    margin-bottom:8px;
-    display:flex;
-    justify-content:space-between;
+.skill-box{
+    background:#f8f9fa;
+    border-radius:15px;
+    padding:20px 10px;
+    text-align:center;
+    transition:.3s;
+    height:100%;
 }
 
-.progress{
-    height:10px;
-    border-radius:30px;
-    background:#edf2f7;
-    overflow:hidden;
-    margin-bottom:22px;
+.skill-box:hover{
+    transform:translateY(-6px);
+    background:#eef5ff;
 }
 
-.progress-bar{
-    border-radius:30px;
-    font-size:0;
+.skill-box svg{
+    font-size:45px;
+    margin-bottom:12px;
 }
 
-/* Skill Icons (optional) */
-
-.skill-icon{
-    width:55px;
-    height:55px;
-    background:#f1f5ff;
-    border-radius:14px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-bottom:18px;
-    font-size:24px;
-    color:#0d6efd;
+.skill-box h6{
+    margin:0;
+    font-weight:600;
 }
 
 /* ===========================
@@ -805,4 +799,59 @@ body{
 
 .row{
     row-gap:30px;
+}
+
+/*=========================
+        Skills
+==========================*/
+
+.skill-box {
+  padding: 16px 14px;
+  background: #ffffff;
+  border-radius: 14px;
+  text-align: center;
+  transition: 0.25s ease;
+
+  border: 1px solid #e9e9e9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.skill-icon {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+.skill-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #333; /* ensures icons don’t look harsh */
+}
+
+.skill-percent {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #666;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background: #f0f0f0;
+  border-radius: 20px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.8s ease;
+}
+
+.skill-category {
+  padding: 18px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
 }
