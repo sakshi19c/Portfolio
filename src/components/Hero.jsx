@@ -27,8 +27,15 @@ function Hero() {
             </p>
 
             <div className="hero-buttons">
-              <button className="btn btn-primary hire-btn">
-                Hire Me
+              <button
+              className="btn btn-primary hire-btn"
+              onClick={() =>
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                })
+              }>
+                  Hire Me
               </button>
 
               <button className="btn btn-outline-dark cv-btn">
