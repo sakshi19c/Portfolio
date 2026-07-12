@@ -1,17 +1,103 @@
-# React + Vite
+# 🌐 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and user-friendly personal portfolio website built with **React**, **Vite**, and **Bootstrap**. This portfolio showcases my skills, projects, education, and contact information while providing a clean and interactive user experience.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Responsive design for desktop, tablet, and mobile devices
+* Modern and clean user interface
+* Hero section with introduction
+* About Me section
+* Skills section
+* Project showcase
+* Contact section
+* Download Resume button
+* Smooth scrolling navigation
+* Bootstrap Icons integration
+* Animated and interactive components
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
 
-## Expanding the ESLint configuration
+* React.js
+* Vite
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* Bootstrap 5
+* Bootstrap Icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Portfolio" 
+## 📂 Project Structure
+
+```text
+portfolio/
+├── public/
+├── src/
+│   ├── assets/
+│   │   ├── image/
+│   │   └── css/
+│   ├── components/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+└── vite.config.js
+```
+
+## 📸 Sections
+
+* Home
+* About
+* Skills
+* Projects
+* Contact
+
+## 💻 Featured Projects
+
+* BrainSync AI
+* Portfolio Website
+* Bank Management System
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/sakshi19c/Portfolio.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd My_Portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## 📧 Contact
+
+Feel free to connect with me for collaboration, internships, or freelance opportunities.
+
+* **Name:** Sakshi Chaurasia
+* **Location:** Lucknow, Uttar Pradesh, India
+
+## 📜 License
+
+This project is created for learning, showcasing skills, and personal portfolio purposes.
